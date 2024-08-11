@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/saude.png">
+  <title>
+    Funcionários
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  <!-- Nucleo Icons -->
+  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link id="pagestyle" href="../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+</head>
+
+<body class="g-sidenav-show bg-gray-100">
+  <div class="position-absolute w-100" style="background-color: #1574bc; min-height: 160px;"></div>
+  <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 " id="sidenav-main">
+    <div class="sidenav-header">
+      <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+      <a class="navbar-brand m-0" target="_blank" href="#">
+        <img src="../assets/img/saude2.png" class="navbar-brand-img h-100" alt="main_logo">
+        <span class="ms-1 font-weight-bold">Secretaria de Saúde</span>
+      </a>
+    </div>
+    <hr class="horizontal dark mt-0">
+    <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/dashboard.html">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Página Inicial</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="../pages/contasbancarias.html">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-money-coins text-warning text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Contas Bancárias</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="../pages/funcionarios.html">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-folder-17 text-success text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Funcionários</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="../pages/virtual-reality.html">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-books text-info text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Folha de Pagamento</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="../pages/rtl.html">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-pin-3 text-danger text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Mapa</span>
+          </a>
+        </li>
+        <li class="nav-item mt-3">
+          <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Configurações</h6>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="../pages/profile.html">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Perfil</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="../pages/sign-in.html">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-settings-gear-65 text-warning text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Configurações</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="../pages/sign-up.html">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-button-power text-info text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Sair</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <main class="main-content position-relative border-radius-lg ">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl " id="navbarBlur" data-scroll="false">
+      <div class="container-fluid py-1 px-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-white" href="javascript:;">Secretaria de Saúde</a></li>
+            <li class="breadcrumb-item text-sm text-white active" aria-current="page">Funcionários</li>
+          </ol>
+        </nav>
+        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+          <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+            <div class="input-group">
+              <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
+              <input type="text" class="form-control" placeholder="Buscar...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="container-fluid py-4">
+      <div class="row">
+        <div class="col-12">
+          <div class="card mb-4">
+            <div class="card-header pb-0">
+              <h6>Funcionários</h6>
+            </div>
+            <div class="card-body px-0 pt-0 pb-2">
+              <div class="table-responsive p-0">
+                <table class="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nome Completo</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Matrícula</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Cargo</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Situação</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Valor Bruto</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Ação</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Descrição</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Conta</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Ação</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">GLEISON RIBEIRO FRADE</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs text-secondary mb-0">21959</p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <p class="text-xs text-secondary mb-0 text-uppercase">Secretário Municipal de Saúde</p>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">AGENTE POLIT-CARGO CONFIANCA/RECRUTAMENTO AMPL (Q)</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">R$ 10.706,26</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">0901206815001002</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">REM.AG.POL.- SEC.SAÚDE</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">854</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="ms-auto">
+                          <a class="text-x btn btn-link text-dark px-3 mb-0" href="javascript:;"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>Editar</a>
+                          <a class="text-x btn btn-link text-danger text-gradient px-3 mb-0" href="javascript:;"><i class="far fa-trash-alt me-2"></i>Deletar</a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">EDNALDO SILVA DURCO</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs text-secondary mb-0">13295</p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <p class="text-xs text-secondary mb-0 text-uppercase">Secretário Adjunto de Saúde</p>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">ESTATUTÁRIO - ESTATUTÁRIO (E)</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">R$ 34.805,36</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">0901206815001002</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">REM.AG.POL.- SEC.SAÚDE</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">854</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="ms-auto">
+                          <a class="text-x btn btn-link text-dark px-3 mb-0" href="javascript:;"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>Editar</a>
+                          <a class="text-x btn btn-link text-danger text-gradient px-3 mb-0" href="javascript:;"><i class="far fa-trash-alt me-2"></i>Deletar</a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">EVANDRO LUIZ PEREIRA</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs text-secondary mb-0">1239</p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <p class="text-xs text-secondary mb-0 text-uppercase">Odontólogo</p>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">CELETISTA - CELETISTA (C)</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">R$ 3.537,78</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">0901206905001002</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">SERV.SEC.SAÚDE</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">854</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="ms-auto">
+                          <a class="text-x btn btn-link text-dark px-3 mb-0" href="javascript:;"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>Editar</a>
+                          <a class="text-x btn btn-link text-danger text-gradient px-3 mb-0" href="javascript:;"><i class="far fa-trash-alt me-2"></i>Deletar</a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">LORRAYNE RESENDE ROSA</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs text-secondary mb-0">23572</p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <p class="text-xs text-secondary mb-0 text-uppercase">Servente de Limpeza</p>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">CONTRATO ADM (K)</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">R$ 510,68</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">0901206905001002</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">SERV.SEC.SAÚDE</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">854</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="ms-auto">
+                          <a class="text-x btn btn-link text-dark px-3 mb-0" href="javascript:;"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>Editar</a>
+                          <a class="text-x btn btn-link text-danger text-gradient px-3 mb-0" href="javascript:;"><i class="far fa-trash-alt me-2"></i>Deletar</a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">RODRIGO RIBEIRO BRANCO</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs text-secondary mb-0">85496</p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <p class="text-xs text-secondary mb-0 text-uppercase">Médico</p>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">CELETISTA - CELETISTA (C)</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">R$ 5.305,22</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">0901206815001002</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">SERV.SEC.SAÚDE</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs">854</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="ms-auto">
+                          <a class="text-x btn btn-link text-dark px-3 mb-0" href="javascript:;"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>Editar</a>
+                          <a class="text-x btn btn-link text-danger text-gradient px-3 mb-0" href="javascript:;"><i class="far fa-trash-alt me-2"></i>Deletar</a>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/argon-dashboard.min.js?v=2.0.4"></script>
+</body>
+
+</html>
