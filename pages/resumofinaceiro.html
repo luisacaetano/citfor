@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/saude.png">
+  <title>Resumo financeiro</title>
+  <!-- Fonts and icons -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  <!-- Nucleo Icons -->
+  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- CSS Files -->
+  <link id="pagestyle" href="../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+  
+  <style>
+    .pagination {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .pagination .btn {
+      margin: 0 5px;
+    }
+  </style>
+</head>
+
+<body class="g-sidenav-show bg-gray-100">
+  <div class="position-absolute w-100" style="background-color: #1574bc; min-height: 160px;"></div>
+  <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 " id="sidenav-main">
+    <div class="sidenav-header">
+      <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+      <a class="navbar-brand m-0" target="_blank" href="#">
+        <img src="../assets/img/Logo_semfundo.png" style="max-height: 4rem !important;" class="navbar-brand-img h-100" alt="main_logo">
+        <span class="ms-1 font-weight-bold">Secretaria</span>
+      </a>
+    </div>
+    <hr class="horizontal dark mt-0">
+    <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/dashboard.html">
+                <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                  <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
+                </div>
+                <span class="nav-link-text ms-1">Página Inicial</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="../pages/contasbancarias.html">
+                <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                  <i class="ni ni-money-coins text-warning text-sm opacity-10"></i>
+                </div>
+                <span class="nav-link-text ms-1">Contas Bancárias</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="../pages/movimentacao.html">
+                <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                  <i class="fa fa-university text-dark text-sm opacity-10"></i>
+                </div>
+                <span class="nav-link-text ms-1">Movimentação</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="../pages/funcionarios.html">
+                <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                  <i class="ni ni-folder-17 text-success text-sm opacity-10"></i>
+                </div>
+                <span class="nav-link-text ms-1">Funcionários</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="../pages/folhadepagamento.html">
+                <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                  <i class="ni ni-books text-info text-sm opacity-10"></i>
+                </div>
+                <span class="nav-link-text ms-1">Folha de Pagamento</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="../pages/rtl.html">
+                <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                  <i class="ni ni-pin-3 text-danger text-sm opacity-10"></i>
+                </div>
+                <span class="nav-link-text ms-1">Mapa</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/resumofinanceiro.html">
+                  <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                      <i class="fas fa-dollar-sign text-success text-sm opacity-10"></i>
+                  </div>
+                  <span class="nav-link-text ms-1">Resumo Financeiro</span>
+              </a>
+          </li>          
+            <li class="nav-item mt-3">
+              <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Configurações</h6>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="../pages/profile.html">
+                <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                  <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
+                </div>
+                <span class="nav-link-text ms-1">Perfil</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="../pages/sign-in.html">
+                <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                  <i class="ni ni-settings-gear-65 text-warning text-sm opacity-10"></i>
+                </div>
+                <span class="nav-link-text ms-1">Configurações</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="../pages/sign-up.html">
+                <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                  <i class="ni ni-button-power text-info text-sm opacity-10"></i>
+                </div>
+                <span class="nav-link-text ms-1">Sair</span>
+              </a>
+            </li>
+          </ul>
+    </div>
+  </aside>
+  <main class="main-content position-relative border-radius-lg ">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl " id="navbarBlur" data-scroll="false">
+      <div class="container-fluid py-1 px-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-white" href="javascript:;">Secretaria de Saúde</a></li>
+            <li class="breadcrumb-item text-sm text-white active" aria-current="page">Folha de Pagamento</li>
+          </ol>
+        </nav>
+        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+          <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+            <div class="input-group">
+              <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
+              <input type="text" class="form-control" placeholder="Buscar...">
+            </div>
+            <div class="input-group ms-3">
+              <span class="input-group-text text-body"><i class="fas fa-calendar" aria-hidden="true"></i></span>
+              <input type="date" id="searchDate" class="form-control" placeholder="Buscar por data...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="container-fluid py-4">
+      <div class="row">
+        <div class="col-12">
+          <button id="generateSummary" class="btn btn-success mb-3">Gerar Resumo</button>
+          <div class="card mb-4">
+            <div class="card-header pb-0">
+              <h6>Folha de Pagamento</h6>
+            </div>
+            <div class="card-body px-0 pt-0 pb-2">
+              <div class="table-responsive p-0">
+                <table class="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                        <input type="checkbox" id="selectAll" />
+                      </th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nome Completo</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Matrícula</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Cargo</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Situação</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Valor Bruto</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Conta</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Descrição</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Ação</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td class="align-middle text-center">
+                            <input type="checkbox" class="rowCheckbox" />
+                        </td>
+                        <td>
+                            <div class="d-flex px-2 py-1">
+                                <div class="d-flex flex-column justify-content-center">
+                                    <h6 class="mb-0 text-sm">CARLA MARTINS ALMEIDA</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <p class="text-xs text-secondary mb-0">78901</p>
+                        </td>
+                        <td class="align-middle text-center text-sm">
+                            <p class="text-xs text-secondary mb-0 text-uppercase">Enfermeira</p>
+                        </td>
+                        <td class="align-middle text-center">
+                            <span class="text-secondary text-xs">CELETISTA - CELETISTA (C)</span>
+                        </td>
+                        <td class="align-middle text-center">
+                            <span class="text-secondary text-xs">R$ 4250.00</span>
+                        </td>
+                        <td class="align-middle text-center">
+                            <span class="text-secondary text-xs">0901206905001003</span>
+                        </td>
+                        <td class="align-middle text-center">
+                            <span class="text-secondary text-xs">SERV.SEC.SAÚDE</span>
+                        </td>
+                        <td class="align-middle text-center">
+                            <span class="text-secondary text-xs">854</span>
+                        </td>
+                      
+                    </tr>
+                    <tr>
+                        <td class="align-middle text-center">
+                            <input type="checkbox" class="rowCheckbox" />
+                          </td>
+                        <td>
+                            <div class="d-flex px-2 py-1">
+                                <div class="d-flex flex-column justify-content-center">
+                                    <h6 class="mb-0 text-sm">JOSÉ CARLOS MARTINS</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <p class="text-xs text-secondary mb-0">45678</p>
+                        </td>
+                        <td class="align-middle text-center text-sm">
+                            <p class="text-xs text-secondary mb-0 text-uppercase">Técnico de Laboratório</p>
+                        </td>
+                        <td class="align-middle text-center">
+                            <span class="text-secondary text-xs">ESTATUTÁRIO - ESTATUTÁRIO (E)</span>
+                        </td>
+                        <td class="align-middle text-center">
+                            <span class="text-secondary text-xs">R$ 3800.00</span>
+                        </td>
+                        <td class="align-middle text-center">
+                            <span class="text-secondary text-xs">0901206905001004</span>
+                        </td>
+                        <td class="align-middle text-center">
+                            <span class="text-secondary text-xs">ATIV.ADMINS/PLANEJ FMS - SAUDE</span>
+                        </td>
+                        <td class="align-middle text-center">
+                            <span class="text-secondary text-xs">854</span>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="align-middle text-center">
+                            <input type="checkbox" class="rowCheckbox" />
+                          </td>
+                        <td>
+                            <div class="d-flex px-2 py-1">
+                                <div class="d-flex flex-column justify-content-center">
+                                    <h6 class="mb-0 text-sm">ANA CLARA SOUZA</h6>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <p class="text-xs text-secondary mb-0">67890</p>
+                        </td>
+                        <td class="align-middle text-center text-sm">
+                            <p class="text-xs text-secondary mb-0 text-uppercase">Auxiliar de Saúde</p>
+                        </td>
+                        <td class="align-middle text-center">
+                            <span class="text-secondary text-xs">CONTRATO ADM (K)</span>
+                        </td>
+                        <td class="align-middle text-center">
+                            <span class="text-secondary text-xs">R$ 1200.00</span>
+                        </td>
+                        <td class="align-middle text-center">
+                            <span class="text-secondary text-xs">0901206905001005</span>
+                        </td>
+                        <td class="align-middle text-center">
+                            <span class="text-secondary text-xs">ATIV.ASS MÉDICA NA UPA - SAÚDE</span>
+                        </td>
+                        <td class="align-middle text-center">
+                            <span class="text-secondary text-xs">854</span>
+                        </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle text-center">
+                          <input type="checkbox" class="rowCheckbox" />
+                      </td>
+                      <td>
+                          <div class="d-flex px-2 py-1">
+                              <div class="d-flex flex-column justify-content-center">
+                                  <h6 class="mb-0 text-sm">LAIS CRISTINA SOUSA</h6>
+                              </div>
+                          </div>
+                      </td>
+                      <td>
+                          <p class="text-xs text-secondary mb-0">56789</p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                          <p class="text-xs text-secondary mb-0 text-uppercase">Assistente Social</p>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">CELETISTA - CELETISTA (C)</span>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">R$ 4800.00</span>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">0901206905001006</span>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">PROG.ATENDIMENTO ESPEC. - SAÚDE</span>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">854</span>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="align-middle text-center">
+                          <input type="checkbox" class="rowCheckbox" />
+                      </td>
+                      <td>
+                          <div class="d-flex px-2 py-1">
+                              <div class="d-flex flex-column justify-content-center">
+                                  <h6 class="mb-0 text-sm">RENATA PAMELLA TEIXEIRA RICCI SALOMAO</h6>
+                              </div>
+                          </div>
+                      </td>
+                      <td>
+                          <p class="text-xs text-secondary mb-0">67890</p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                          <p class="text-xs text-secondary mb-0 text-uppercase">Psicóloga</p>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">CELETISTA - CELETISTA (C)</span>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">R$ 5000.00</span>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">0901206905001007</span>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">PROG.ATENDIMENTO ESPEC. - SAÚDE</span>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">854</span>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="align-middle text-center">
+                          <input type="checkbox" class="rowCheckbox" />
+                      </td>
+                      <td>
+                          <div class="d-flex px-2 py-1">
+                              <div class="d-flex flex-column justify-content-center">
+                                  <h6 class="mb-0 text-sm">ILMA DE RESENDE</h6>
+                              </div>
+                          </div>
+                      </td>
+                      <td>
+                          <p class="text-xs text-secondary mb-0">12345</p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                          <p class="text-xs text-secondary mb-0 text-uppercase">Enfermeira</p>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">CELETISTA - CELETISTA (C)</span>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">R$ 4200.00</span>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">0901206905001008</span>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">PSF - PSF</span>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">854</span>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="align-middle text-center">
+                          <input type="checkbox" class="rowCheckbox" />
+                      </td>
+                      <td>
+                          <div class="d-flex px-2 py-1">
+                              <div class="d-flex flex-column justify-content-center">
+                                  <h6 class="mb-0 text-sm">JESSICA ADRIELLE CAMPOS</h6>
+                              </div>
+                          </div>
+                      </td>
+                      <td>
+                          <p class="text-xs text-secondary mb-0">23456</p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                          <p class="text-xs text-secondary mb-0 text-uppercase">Auxiliar Administrativo</p>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">CONTRATO ADM (K)</span>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">R$ 1500.00</span>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">0901206905001009</span>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">PSF - PSF</span>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">854</span>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="align-middle text-center">
+                          <input type="checkbox" class="rowCheckbox" />
+                      </td>
+                      <td>
+                          <div class="d-flex px-2 py-1">
+                              <div class="d-flex flex-column justify-content-center">
+                                  <h6 class="mb-0 text-sm">MARILIA APARECIDA ARANTES TEIXEIRA E SILVEIRA</h6>
+                              </div>
+                          </div>
+                      </td>
+                      <td>
+                          <p class="text-xs text-secondary mb-0">34567</p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                          <p class="text-xs text-secondary mb-0 text-uppercase">Fisioterapeuta</p>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">CELETISTA - CELETISTA (C)</span>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">R$ 5500.00</span>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">0901206905001010</span>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">PSF - PSF</span>
+                      </td>
+                      <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">854</span>
+                      </td>
+                  </tr>
+                </tbody>
+                </table>
+              </div>
+              <!-- Paginação -->
+              <div class="pagination d-flex justify-content-center align-items-center">
+                <button id="prevPage"><</button>
+                <span id="pageNumber">1</span>
+                <button id="nextPage" >></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- JS Files -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.21/jspdf.plugin.autotable.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const itemsPerPage = 5;
+    let currentPage = 1;
+
+    const updatePagination = () => {
+      const totalItems = document.querySelectorAll("tbody tr").length;
+      const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+      document.getElementById("pageNumber").textContent = currentPage;
+      document.getElementById("prevPage").disabled = currentPage === 1;
+      document.getElementById("nextPage").disabled = currentPage === totalPages;
+
+      const rows = document.querySelectorAll("tbody tr");
+      rows.forEach((row, index) => {
+        row.style.display = (index >= (currentPage - 1) * itemsPerPage && index < currentPage * itemsPerPage) ? "" : "none";
+      });
+    };
+
+    const filterByDate = () => {
+      const searchDate = document.getElementById("searchDate").value;
+      const rows = document.querySelectorAll("tbody tr");
+      rows.forEach(row => {
+        const dateCell = row.cells[10]; // Ajuste para a coluna de data de inserção se necessário
+        const cellDate = dateCell ? dateCell.textContent.trim() : '';
+        row.style.display = searchDate === "" || cellDate === searchDate ? "" : "none";
+      });
+    };
+
+    document.getElementById("searchDate").addEventListener("change", filterByDate);
+
+    document.getElementById("prevPage").addEventListener("click", () => {
+      if (currentPage > 1) {
+        currentPage--;
+        updatePagination();
+      }
+    });
+
+    document.getElementById("nextPage").addEventListener("click", () => {
+      const totalItems = document.querySelectorAll("tbody tr").length;
+      const totalPages = Math.ceil(totalItems / itemsPerPage);
+      if (currentPage < totalPages) {
+        currentPage++;
+        updatePagination();
+      }
+    });
+
+    document.getElementById("selectAll").addEventListener("change", (event) => {
+      document.querySelectorAll(".rowCheckbox").forEach(checkbox => {
+        checkbox.checked = event.target.checked;
+      });
+    });
+
+    document.getElementById("generateSummary").addEventListener("click", () => {
+      const selectedRows = Array.from(document.querySelectorAll(".rowCheckbox:checked")).map(checkbox => checkbox.closest("tr"));
+      const summary = {};
+
+      let grandTotal = 0; // Variable to store the grand total
+
+      selectedRows.forEach(row => {
+        const description = row.cells[7].textContent.trim(); // Ajuste conforme a coluna de descrição
+        const value = parseFloat(row.cells[5].textContent.replace("R$", "").replace(",", ".").trim());
+        if (!summary[description]) {
+          summary[description] = 0;
+        }
+        summary[description] += value;
+        grandTotal += value; // Add to grand total
+      });
+
+      // Prepare data for the table
+      const tableData = Object.entries(summary).map(([description, total]) => [
+        description,
+        `R$ ${total.toFixed(2).replace(".", ",")}`
+      ]);
+
+      // Add grand total to the table
+      tableData.push([
+        'TOTAL A PAGAR',
+        `R$ ${grandTotal.toFixed(2).replace(".", ",")}`
+      ]);
+
+      // Create PDF with jsPDF and jsPDF-AutoTable
+      const { jsPDF } = window.jspdf; // Access jsPDF from the global window object
+      const doc = new jsPDF();
+      doc.text("Resumo Folha de Pagamento", 10, 10);
+
+      doc.autoTable({
+        startY: 20,
+        head: [['Descrição', 'Total']],
+        body: tableData,
+        theme: 'striped',
+        headStyles: { fillColor: [0, 0, 0] },
+        styles: { cellPadding: 5, fontSize: 10 },
+        columnStyles: {
+          0: { cellWidth: 'auto' }, // Ajuste a largura das colunas
+          1: { halign: 'right' }
+        }
+      });
+
+      doc.save("resumo_folha_pagamento.pdf");
+    });
+
+    updatePagination();
+  });
+</script>
+
+</body>
+</html>

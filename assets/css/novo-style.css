@@ -1,0 +1,137 @@
+/* Estilos que eu criei pras novas paginas */
+/* Victor Luis *//*
+
+
+aloalo
+/*======================================================================================*/
+/*CONTEINERS*/
+/*======================================================================================*/
+
+/*so a caixa pros conteiners*/
+.conteiner-principal{
+  display: flex;                  /* coloca o display flex */
+  justify-content: space-between; /* espaco entre os elementos */
+  align-items: flex-start;        /* coloca eles em cima */
+  padding: 0 5%;                  /* padding */
+}
+
+/*=======*/
+/*conteudo do conteiner*/
+.conteiner-principal .conteudo {
+  background-color: white; /* cor de fundo */
+  padding: 15px;           /* padding */
+  width: 74%;              /* largura */
+  min-height: 30vh;         /* altura minima */
+  border-radius: 15px;     /* curvatura */
+}
+
+.atual{
+  overflow-x: auto;  /* Enable horizontal scrolling if table is too wide */
+
+}
+
+.atual table {
+  border: 1px solid #ddd;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.atual th, .atual td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.atual th {
+  background-color: #f4f4f4;
+}
+
+/*=======*/
+/*painel do lado do conteiner*/
+.conteiner-principal .painel {
+  overflow: hidden;        /* esconde oq n cabe */
+  background-color: white; /* cor de fundo */
+  padding: 15px;           /* padding */
+  width: 25%;              /* largura */
+  min-height: 25vh;            /* altura */
+  border-radius: 15px;     /* curvatura */
+  position: relative;      /* deixa colocar posicao absoluta */
+}
+
+/* botao q recebe arquivo */
+.painel .recebeArquivo {
+  overflow: hidden;        /* esconde oq n cabe */
+  display: flex;           /* coloca os elementos lado a lado */
+  background-color: #EEE;  /* cor de fundo */
+  width: 100%;             /* largura */
+  height: 10vh;             /* altura */
+  border: none;            /* remove a borda padrao */
+  margin: auto auto;       /* centraliza */
+  border-radius: 15px;     /* curvatura */
+  position: relative;      /* deixa colocar posicao absoluta */
+  align-items: center;     /* alinha vertical */
+}
+
+.recebeArquivo:hover{
+
+}
+
+.recebeArquivo img{
+  height: 50%;
+  margin: 0 5%;
+}
+
+/*=======*/
+/* Botões */
+/*define como e o botao*/
+.painel #botaoEnviar{
+  margin-top: 5%;
+  background-color: #0055AA;       /* fundo azul */
+  color: white;                    /* texto branco */
+  border: none;                    /* remove a borda padrao */
+  border-radius: 12px;             /* curvatura da borda */
+  padding: 5px 15px;               /* padding */
+  font-size: 16px;                 /* tamanho do texto */
+  transition: transform 0.3s ease; /* transicao */
+}
+
+/*define oq acontece quando coloca o mouse em cima*/
+.painel #botaoEnviar:hover{
+  transform: scale(1.1);     /* muda o tamanho um pouco */
+}
+
+/*estilo do botao desativado*/
+.painel #botaoEnviar:disabled {
+  background-color: #AAA; /* cor cinza */
+  color: #222;            /* cor do texto cinza claro */
+  cursor: not-allowed;    /* cursor de não permitido */
+  transform: none;        /* remove o efeito de transformação */
+  opacity: 0.6;           /* opacidade reduzida */
+}
+
+/*======================================================================================*/
+
+/*conteiner que mostra as ultimas mudancas*/
+.conteiner-mudancas{
+  background-color: white; /* cor de fundo */
+  padding: 15px;           /* padding */
+  width: 90%;              /* largura */
+  min-height: 90%;         /* altura minima */
+  border-radius: 15px;     /* curvatura */
+  margin: 5vh 5%;
+}
+
+.conteiner-mudancas .linha{
+  display: flex;                  /* flexbox pra alinhar em linha */
+  justify-content: space-between; /* espaçamento entre colunas */
+  margin-bottom: 10px;            /* espaçamento entre as linhas */
+  background-color: #eee;         /* cor de fundo das linhas */
+}
+
+.linha p{
+  flex: 1;            /* colunas de tamanhos iguais */
+  padding: 1%;        /* Padding interno das colunas */
+  text-align: center; /* centraliza o texto */
+  margin: 0;          /* remove a margem padrão dos p */
+}
+/*======================================================================================*/
